@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head><meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hello world! – artelibre</title>
+<meta name="robots" content="max-image-preview:large">
+    <script id="prismix-color-mode-bootstrap">
+    (function(){
+        var cfg = {"defaultMode":"light","allowAuto":true};
+        var saved = null;
+        try { saved = localStorage.getItem('prismixColorMode'); } catch (e) {}
+        var mode = saved;
+        if (!mode) {
+            if (cfg.allowAuto && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                mode = 'dark';
+            } else {
+                mode = cfg.defaultMode;
+            }
+        }
+        document.documentElement.setAttribute('data-color-mode', mode);
+    })();
+    </script>
+    <style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=/wp-includes/blocks/paragraph/style.min.css */
+</style>
+
+<link rel="stylesheet" id="prismix-style-css" href="../../../../wp-content/themes/prismix/style.css" media="all">
+<style id="prismix-style-inline-css">
+:root{--accent:#E00914;--accent-hover:#c40812;--accent-text:#ffffff;--accent2:#EA5245;--accent2-hover:#E94E1B;--success:#22c55e;--warning:#f59e0b;--danger:#ef4444;--radius-sm:8px;--radius-md:14px;--radius-lg:20px;--radius-full:999px;--font-body:'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;--font-headings:'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;--font-size-base:14px;--body-weight:400;--body-line-height:1.6;--body-letter-spacing:0em;--body-text-transform:none;--heading-weight:700;--headings-line-height:1.25;--headings-letter-spacing:-0.02em;--headings-text-transform:none;--h1-size:28px;--h2-size:22px;--h3-size:18px;--h4-size:16px;--h5-size:14px;--h6-size:13px;--container-width:1200px;--grid-gap:14px;--header-bg-opacity:0.82;--header-blur:16px;--card-radius:16px;--card-min-height:220px;--card-overlay-opacity:0.78;--transition-fast:0.15s cubic-bezier(0.4,0,0.2,1);--transition-normal:0.25s cubic-bezier(0.4,0,0.2,1);--bg:#ffffff;--bg-secondary:#f7f7fa;--bg-tertiary:#eef0f4;--text-primary:#0c0c0f;--text-secondary:#3f3f46;--text-muted:#6b7280;--border:rgba(0,0,0,0.08);--border-hover:rgba(0,0,0,0.14);--surface:rgba(0,0,0,0.04);--surface-hover:rgba(0,0,0,0.07);--surface-active:rgba(0,0,0,0.10);--shadow-sm:0 2px 8px rgba(0,0,0,0.06);--shadow-md:0 8px 24px rgba(0,0,0,0.10);--shadow-lg:0 18px 60px rgba(0,0,0,0.18);}:root[data-color-mode="dark"]{--bg:#141426;--bg-secondary:#1c1b30;--bg-tertiary:#252440;--text-primary:#EFEDED;--text-secondary:#d6d4d4;--text-muted:#a89f9f;--border:rgba(255,255,255,0.08);--border-hover:rgba(255,255,255,0.15);--surface:rgba(255,255,255,0.05);--surface-hover:rgba(255,255,255,0.09);--surface-active:rgba(255,255,255,0.13);--shadow-sm:0 2px 8px rgba(0,0,0,0.25);--shadow-md:0 8px 24px rgba(0,0,0,0.35);--shadow-lg:0 18px 60px rgba(0,0,0,0.5);}:root[data-color-mode="light"]{--bg:#ffffff;--bg-secondary:#f7f7fa;--bg-tertiary:#eef0f4;--text-primary:#0c0c0f;--text-secondary:#3f3f46;--text-muted:#6b7280;--border:rgba(0,0,0,0.08);--border-hover:rgba(0,0,0,0.14);--surface:rgba(0,0,0,0.04);--surface-hover:rgba(0,0,0,0.07);--surface-active:rgba(0,0,0,0.10);--shadow-sm:0 2px 8px rgba(0,0,0,0.06);--shadow-md:0 8px 24px rgba(0,0,0,0.10);--shadow-lg:0 18px 60px rgba(0,0,0,0.18);}
+/*# sourceURL=prismix-style-inline-css */
+</style>
+<style id="prismix-single-post-inline-css">
+
+/* Single Post Header */
+.single-post { padding: 0 0 60px; }
+.single-post-header { max-width: 720px; margin: 0 auto 32px; text-align: center; }
+.single-post-meta { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+.post-category { display: inline-block; padding: 6px 14px; background: var(--accent); color: #1b120f; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border-radius: 4px; text-decoration: none; }
+.post-date, .post-reading-time { font-size: 14px; color: var(--muted); }
+.single-post-title { margin: 0 0 16px; font-size: clamp(28px, 5vw, 42px); font-weight: 800; line-height: 1.2; color: var(--text); }
+.single-post-excerpt { font-size: 18px; color: var(--muted); line-height: 1.6; margin: 0 0 24px; }
+.single-post-author { display: inline-flex; align-items: center; gap: 12px; }
+.single-post-author img { width: 48px; height: 48px; border-radius: 50%; }
+.author-info { display: flex; flex-direction: column; text-align: left; }
+.author-name { font-weight: 600; color: var(--text); }
+.author-bio { font-size: 13px; color: var(--muted); }
+/* Featured Image */
+.single-post-featured-image { margin: 0 auto 40px; max-width: 900px; border-radius: var(--radius); overflow: hidden; }
+.single-post-featured-image img { width: 100%; height: auto; display: block; }
+.single-post-featured-image figcaption { padding: 12px 16px; background: rgba(255,255,255,.03); font-size: 13px; color: var(--muted); text-align: center; }
+/* Post Layout */
+.single-post-layout { display: grid; grid-template-columns: 1fr 200px; gap: 60px; max-width: 1000px; margin: 0 auto; }
+/* Post Content */
+.single-post-content { max-width: 720px; }
+.single-post-content h2, .single-post-content h3, .single-post-content h4, .single-post-content h5, .single-post-content h6 { margin: 32px 0 16px; color: var(--text); scroll-margin-top: 100px; }
+.single-post-content h2 { font-size: 28px; }
+.single-post-content h3 { font-size: 22px; }
+.single-post-content p { margin: 0 0 20px; font-size: 17px; line-height: 1.8; color: var(--text); }
+.single-post-content a { color: var(--accent); text-decoration: underline; }
+.single-post-content ul, .single-post-content ol { margin: 0 0 20px; padding-left: 24px; }
+.single-post-content li { margin-bottom: 8px; font-size: 17px; line-height: 1.7; }
+.single-post-content blockquote { margin: 24px 0; padding: 20px 24px; border-left: 4px solid var(--accent); background: rgba(255,255,255,.03); border-radius: 0 var(--radius) var(--radius) 0; }
+.single-post-content blockquote p:last-child { margin-bottom: 0; }
+.single-post-content pre, .single-post-content code { font-family: "Monaco", "Consolas", monospace; background: rgba(0,0,0,.3); border-radius: 4px; }
+.single-post-content code { padding: 2px 6px; font-size: 14px; }
+.single-post-content pre { padding: 20px; overflow-x: auto; margin: 0 0 20px; }
+.single-post-content pre code { padding: 0; background: none; }
+.single-post-content img { max-width: 100%; height: auto; border-radius: var(--radius); }
+.single-post-content figure { margin: 24px 0; }
+.single-post-content figcaption { margin-top: 8px; font-size: 13px; color: var(--muted); text-align: center; }
+/* Sidebar */
+.single-post-sidebar { position: relative; }
+.sidebar-sticky { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 24px; }
+/* TOC Widget */
+.toc-widget, .share-widget { background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
+.toc-widget .widget-title, .share-widget .widget-title { margin: 0 0 12px; font-size: 14px; font-weight: 700; color: var(--text); }
+.toc-nav ul { list-style: none; padding: 0; margin: 0; }
+.toc-nav li { margin-bottom: 8px; }
+.toc-nav li.toc-level-3 { padding-left: 12px; }
+.toc-nav a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color .2s; }
+.toc-nav a:hover { color: var(--accent); }
+/* Share Buttons */
+.share-buttons { display: flex; gap: 8px; }
+.share-btn { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px; background: rgba(255,255,255,.05); border: 1px solid var(--border); color: var(--muted); text-decoration: none; cursor: pointer; transition: all .2s; }
+.share-btn:hover { background: var(--accent); border-color: var(--accent); color: #1b120f; }
+/* Post Footer */
+.single-post-footer { max-width: 720px; margin: 48px auto 0; padding-top: 32px; border-top: 1px solid var(--border); }
+.post-tags { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.tags-label { font-weight: 600; color: var(--text); }
+.post-tags .tag-link { display: inline-block; padding: 6px 12px; background: rgba(255,255,255,.05); border: 1px solid var(--border); border-radius: 20px; font-size: 13px; color: var(--muted); text-decoration: none; transition: all .2s; }
+.post-tags .tag-link:hover { background: var(--accent); border-color: var(--accent); color: #1b120f; }
+/* Post Navigation */
+.post-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.nav-prev, .nav-next { padding: 20px; background: rgba(255,255,255,.03); border: 1px solid var(--border); border-radius: var(--radius); }
+.nav-next { text-align: right; }
+.nav-label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+.post-navigation a { font-weight: 600; color: var(--text); text-decoration: none; transition: color .2s; }
+.post-navigation a:hover { color: var(--accent); }
+/* Related Posts */
+.related-posts { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); }
+.related-posts .section-title { margin: 0 0 24px; font-size: 24px; text-align: center; }
+.related-posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.related-post-card { background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: all .2s; }
+.related-post-card:hover { border-color: rgba(255,255,255,.15); transform: translateY(-2px); }
+.related-post-image { display: block; aspect-ratio: 16/9; overflow: hidden; }
+.related-post-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.related-post-card:hover .related-post-image img { transform: scale(1.05); }
+.related-post-content { padding: 16px; }
+.related-post-date { display: block; font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+.related-post-title { margin: 0; font-size: 16px; font-weight: 600; line-height: 1.4; }
+.related-post-title a { color: var(--text); text-decoration: none; }
+.related-post-title a:hover { color: var(--accent); }
+/* Post Nav Links (multi-page) */
+.post-nav-links { display: flex; align-items: center; gap: 8px; margin: 24px 0; padding: 16px; background: rgba(255,255,255,.03); border-radius: var(--radius); }
+.post-nav-links > span:first-child { font-weight: 600; margin-right: 8px; }
+.page-link { display: inline-flex; align-items: center; justify-content: center; min-width: 36px; height: 36px; padding: 0 12px; background: rgba(255,255,255,.05); border: 1px solid var(--border); border-radius: 6px; color: var(--muted); text-decoration: none; }
+.page-link:hover { background: var(--accent); border-color: var(--accent); color: #1b120f; }
+/* Responsive */
+@media (max-width: 1024px) {
+    .single-post-layout { grid-template-columns: 1fr; }
+    .single-post-sidebar { order: -1; }
+    .sidebar-sticky { position: static; flex-direction: row; justify-content: center; }
+    .toc-widget { display: none; }
+}
+@media (max-width: 768px) {
+    .single-post-title { font-size: 28px; }
+    .single-post-excerpt { font-size: 16px; }
+    .single-post-content p, .single-post-content li { font-size: 16px; }
+    .post-navigation { grid-template-columns: 1fr; }
+    .nav-next { text-align: left; }
+    .related-posts-grid { grid-template-columns: 1fr; }
+}
+
+/*# sourceURL=prismix-single-post-inline-css */
+</style>
+<link rel="stylesheet" id="artelibre-brand-css" href="../../../../wp-content/themes/prismix/assets/css/artelibre-brand.css" media="all">
+<link rel="canonical" href="index.html">
+<link rel="stylesheet" href="../../../../assets/static.css">
+<meta name="description" content="Arte Libre: inspiración visual con fuentes y licencias claras, y Creative Studio para ideas que necesitan presencia.">
+<link rel="icon" type="image/png" href="../../../../wp-content/themes/prismix/assets/img/artelibre-icon.png">
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-1 single-format-standard wp-embed-responsive wp-theme-prismix" data-card-hover="lift" data-card-zoom="true">
+
+<a class="skip-link screen-reader-text" href="#main-content">Saltar al contenido</a>
+
+<!-- Header Wrapper (sticky) -->
+<div class="header-wrapper">
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="../../../../index.html">
+        <span class="logo" aria-hidden="true">
+                      <img decoding="async" src="../../../../wp-content/themes/prismix/assets/img/artelibre-icon.png" alt="ArteLibre" width="34" height="34" class="artelibre-logo-icon">
+                  </span>
+        <span class="site-name">Arte Libre</span>
+      </a>
+
+      <nav class="navlinks" aria-label="Navegación principal">
+        <ul class="menu artelibre-menu">
+          <li><a href="../../../../index.html">Inicio</a></li>
+          <li><a href="../../../../buscador/index.html#explorar">Explorar</a></li>
+          <li><a href="../../../../studio/index.html">Creative Studio</a></li>
+          <li><a href="../../../../murales/index.html">Murales</a></li>
+          <li><a href="../../../../nosotros/index.html">Nosotros</a></li>
+        </ul>
+      </nav>
+
+      
+      <button id="prismix-color-toggle" class="color-toggle" type="button" aria-label="Cambiar tema de color" title="Cambiar tema de color">
+        <svg class="icon icon-sun" width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+        </svg>
+        <svg class="icon icon-moon" width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-haspopup="dialog" aria-controls="drawer" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+</div>
+<!-- End Header Wrapper -->
+
+<!-- Mobile drawer -->
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Menú móvil">
+  <div class="drawer-panel">
+    <div class="drawer-header">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Arte Libre</span>
+      </div>
+      <button class="btn" id="closeDrawer" type="button">Cerrar</button>
+    </div>
+
+    <nav class="drawer-nav" aria-label="Navegación móvil">
+      <ul class="menu">
+        <li><a href="../../../../index.html">Inicio</a></li>
+        <li><a href="../../../../buscador/index.html#explorar">Explorar</a></li>
+        <li><a href="../../../../studio/index.html">Creative Studio</a></li>
+        <li><a href="../../../../murales/index.html">Murales</a></li>
+        <li><a href="../../../../nosotros/index.html">Nosotros</a></li>
+      </ul>
+    </nav>
+
+      </div>
+</div>
+
+<main id="main-content" tabindex="-1">
+
+<article class="single-post post-1 post type-post status-publish format-standard hentry category-uncategorized" itemscope itemtype="https://schema.org/BlogPosting">
+    <div class="container">
+        <header class="single-post-header">
+            <div class="single-post-meta">
+                                    <a href="../../../../category/uncategorized/index.html" class="post-category" itemprop="articleSection">
+                        Uncategorized                    </a>
+                                <span class="post-date">
+                    <time datetime="2026-07-20T21:36:26+00:00" itemprop="datePublished">
+                        July 20, 2026                    </time>
+                </span>
+                <span class="post-reading-time">
+                    1 min read                </span>
+            </div>
+            <h1 class="single-post-title" itemprop="headline">Hello world!</h1>
+                        <div class="single-post-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <img alt="" src="https://secure.gravatar.com/avatar/33e54dec0cd79fc4b5e911c15f836c46ec8d0e452ecd3ca5f707bce0a3540a3b?s=48&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/33e54dec0cd79fc4b5e911c15f836c46ec8d0e452ecd3ca5f707bce0a3540a3b?s=96&amp;d=mm&amp;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" decoding="async">                <div class="author-info">
+                    <span class="author-name" itemprop="name">jnisperuza</span>
+                    <span class="author-bio">Autor</span>
+                </div>
+            </div>
+        </header>
+
+        
+        <div class="single-post-layout">
+            <div class="single-post-content" itemprop="articleBody">
+                
+<p class="wp-block-paragraph">Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>
+
+                            </div>
+
+            <aside class="single-post-sidebar">
+                <div class="sidebar-sticky">
+                    
+                    <!-- Share Widget -->
+                    <div class="share-widget">
+                        <h3 class="widget-title">Compartir</h3>
+                        <div class="share-buttons">
+                            <a href="https://twitter.com/intent/tweet?url=%2F2026%2F07%2F20%2Fhello-world%2F&amp;text=Hello+world%21" target="_blank" rel="noopener noreferrer" class="share-btn share-twitter" title="Twitter">
+                                <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=%2F2026%2F07%2F20%2Fhello-world%2F" target="_blank" rel="noopener noreferrer" class="share-btn share-facebook" title="Facebook">
+                                <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2F2026%2F07%2F20%2Fhello-world%2F&amp;title=Hello+world%21" target="_blank" rel="noopener noreferrer" class="share-btn share-linkedin" title="LinkedIn">
+                                <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+                                </svg>
+                            </a>
+                            <button type="button" class="share-btn share-copy" title="Copiar enlace" data-url="index.html">
+                                <svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="single-post-footer">
+            
+            <nav class="post-navigation">
+                                                            </nav>
+        </footer>
+
+                    </div>
+</article>
+
+<div id="comments" class="comments-area">
+			<h2 class="comments-title">
+			Una respuesta		</h2>
+
+		<ol class="comment-list">
+					<li id="comment-1" class="comment even thread-even depth-1">
+			<article id="div-comment-1" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/8e1606e6fba450a9362af43874c1b2dfad34c782e33d0a51e1b46c18a2a567dd?s=40&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/8e1606e6fba450a9362af43874c1b2dfad34c782e33d0a51e1b46c18a2a567dd?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" decoding="async">						<b class="fn"><a href="https://wordpress.org/" class="url" rel="ugc external nofollow">A WordPress Commenter</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-1"><time datetime="2026-07-20T21:36:26+00:00">July 20, 2026 at 9:36 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi, this is a comment.<br>
+To get started with moderating, editing, and deleting comments, please visit the Comments screen in the dashboard.<br>
+Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="index.html#respond" data-commentid="1" data-postid="1" data-belowelement="div-comment-1" data-respondelement="respond" data-replyto="Reply to A WordPress Commenter" aria-label="Reply to A WordPress Commenter">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		</ol>
+
+		
+			
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3><p>Los comentarios no están disponibles en esta versión del sitio.</p>	</div><!-- #respond -->
+	</div>
+
+</main>
+
+
+<footer class="artelibre-footer">
+  <div class="container artelibre-footer-grid">
+    <div class="artelibre-footer-brand">
+      <a class="brand" href="../../../../index.html">
+        <span class="logo"><img decoding="async" src="../../../../wp-content/themes/prismix/assets/img/artelibre-icon.png" alt="" width="36" height="36"></span>
+        <span class="site-name">Arte Libre</span>
+      </a>
+      <p>Agencia digital y raíz visual: inspiración para crear, espacio para ser visto.</p>
+    </div>
+    <nav class="artelibre-footer-nav" aria-label="Navegación del pie de página">
+      <span>Explora</span>
+      <a href="../../../../buscador/index.html#explorar">Descubrir imágenes</a>
+      <a href="../../../../studio/index.html">ArteLibre Creative Studio</a>
+      <a href="../../../../murales/index.html">Murales</a>
+      <a href="../../../../nosotros/index.html">Sobre nosotros</a>
+    </nav>
+    <nav class="artelibre-footer-social" aria-label="Redes sociales de Arte Libre">
+      <span>Síguenos</span>
+      <a href="https://www.instagram.com/artelibrework/" target="_blank" rel="noopener noreferrer"><b>Instagram</b><small>@artelibrework</small><i aria-hidden="true">↗</i></a>
+      <a href="https://www.tiktok.com/@artelibre_work" target="_blank" rel="noopener noreferrer"><b>TikTok</b><small>@artelibre_work</small><i aria-hidden="true">↗</i></a>
+    </nav>
+    <div class="artelibre-footer-sena">
+      <span>Proyecto formativo</span>
+      <a href="https://www.sena.edu.co/" target="_blank" rel="noopener noreferrer">
+        <img decoding="async" src="../../../../wp-content/themes/prismix/assets/img/sena-logo.svg" alt="SENA" width="54" height="54">
+        <strong>Servicio Nacional<br>de Aprendizaje</strong>
+      </a>
+    </div>
+  </div>
+  <div class="container artelibre-footer-bottom">
+    <span>© 2026 Arte Libre · Proyecto académico colombiano.</span>
+    <span>Las imágenes externas conservan la licencia de su fuente.</span>
+  </div>
+</footer>
+
+<div class="image-preview-modal" id="image-preview-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="image-preview-title" inert>
+  <div class="image-preview-backdrop" data-preview-close></div>
+  <div class="image-preview-shell">
+    <button type="button" class="image-preview-close" data-preview-close aria-label="Cerrar vista previa">×</button>
+    <div class="image-preview-media">
+      <img decoding="async" id="image-preview-img" src="" alt="">
+    </div>
+    <div class="image-preview-panel">
+      <span class="image-preview-kicker">Vista previa</span>
+      <h2 id="image-preview-title" class="image-preview-title"></h2>
+      <p id="image-preview-subtitle" class="image-preview-subtitle"></p>
+      <a id="image-preview-attribution" class="image-preview-attribution" href="#" target="_blank" rel="noopener noreferrer" hidden>Ver autor y fuente ↗</a>
+      <p id="image-preview-license" class="image-preview-license">Uso gratuito sujeto a las condiciones de la fuente.</p>
+      <a id="image-preview-license-link" class="image-preview-license-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Consultar licencia ↗</a>
+      <div class="image-preview-actions">
+        <a id="image-preview-download" class="btn primary" href="#">Descargar imagen</a>
+        <a id="image-preview-primary" class="btn" href="#" target="_self" rel="noopener">Ver detalles</a>
+        <a id="image-preview-secondary" class="btn btn-quiet" href="#" target="_blank" rel="noopener noreferrer">Abrir original</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script defer src="../../../../assets/site.js"></script>
+</body>
+</html>

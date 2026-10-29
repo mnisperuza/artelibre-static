@@ -1,0 +1,114 @@
+/**
+ * Prismix admin global search modal.
+ */
+
+.prismix-search-trigger{
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px 8px 10px;
+    background: #1d2327;
+    color: #fff;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    z-index: 99999;
+    box-shadow: 0 4px 16px rgba(0,0,0,.25);
+    font-size: 13px;
+    transition: transform .15s ease, background .15s ease;
+}
+.prismix-search-trigger:hover{ background: var(--wp-admin-theme-color, #2271b1); transform: translateY(-1px); }
+.prismix-search-trigger .dashicons{ font-size: 16px; width:16px; height:16px; }
+.prismix-search-trigger kbd{
+    background: rgba(255,255,255,.15);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 11px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.prismix-search-modal{
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 12vh;
+}
+.prismix-search-modal[hidden]{ display: none; }
+.prismix-search-backdrop{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    backdrop-filter: blur(2px);
+}
+.prismix-search-panel{
+    position: relative;
+    width: min(640px, 92vw);
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 30px 80px rgba(0,0,0,.25);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+#prismix-search-input{
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #e0e0e3;
+    padding: 18px 22px;
+    font-size: 16px;
+    outline: none;
+    background: #fff;
+    color: #1d2327;
+    box-sizing: border-box;
+}
+#prismix-search-results{
+    list-style: none;
+    margin: 0;
+    padding: 6px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+.prismix-search-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #1d2327;
+    font-size: 14px;
+}
+.prismix-search-row.is-selected{
+    background: var(--wp-admin-theme-color, #2271b1);
+    color: #fff;
+}
+.prismix-search-row.is-selected .prismix-search-group{ color: rgba(255,255,255,.85); }
+.prismix-search-group{
+    color: #8c8f94;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+}
+.prismix-search-empty{
+    padding: 18px;
+    color: #8c8f94;
+    text-align: center;
+    font-size: 14px;
+}
+.prismix-search-foot{
+    display: flex;
+    gap: 16px;
+    padding: 10px 18px;
+    background: #f6f7f7;
+    border-top: 1px solid #e0e0e3;
+    color: #50575e;
+    font-size: 11px;
+}
+
+body.prismix-search-open{ overflow: hidden; }

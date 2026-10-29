@@ -1,0 +1,8 @@
+{
+  "name": "artelibre-static",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check assets/site.js && node --check assets/picsearch.js && node --check assets/picsearch-core.js"
+  }
+}

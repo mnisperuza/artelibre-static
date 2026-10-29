@@ -1,0 +1,11 @@
+node_modules/
+*.log
+.env
+.env.*
+*.sql
+*.sql.gz
+wp-config.php
+**/wp-config.php
+backups/
+.DS_Store
+Thumbs.db

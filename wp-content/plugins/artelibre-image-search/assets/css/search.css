@@ -1,0 +1,308 @@
+/* Artelibre Image Search Styles */
+
+/* =========================================================
+   Standalone search widget (para páginas de prueba o custom)
+   ========================================================= */
+.artelibre-search-container {
+    margin-bottom: 2rem;
+    padding: 40px 20px;
+    background: #fafafa;
+}
+
+.artelibre-search-wrapper {
+    display: flex;
+    gap: 0;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    justify-content: center;
+}
+
+.artelibre-search-input {
+    flex: 0 1 500px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px 0 0 8px;
+    transition: border-color 0.3s ease;
+}
+
+.artelibre-search-input:focus {
+    outline: none;
+    border-color: #E00914;
+    box-shadow: 0 0 0 3px rgba(224, 9, 20, 0.1);
+}
+
+.artelibre-search-btn,
+.artelibre-search-button {
+    padding: 12px 32px;
+    background-color: #E00914;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.artelibre-search-btn:hover,
+.artelibre-search-button:hover {
+    background-color: #E00914;
+}
+
+/* =========================================================
+   Sección de resultados externos en search.php del tema
+   ========================================================= */
+.artelibre-external-section {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border, rgba(255,255,255,0.08));
+}
+
+.artelibre-external-section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+/* El grid reutiliza .grid del tema, sin override */
+#artelibre-api-results .grid {
+    margin-top: 0;
+}
+
+/* Loading */
+.artelibre-loading {
+    text-align: center;
+    padding: 32px 20px;
+    font-size: 16px;
+    color: #E00914;
+}
+
+.artelibre-loading::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(224, 9, 20, 0.2);
+    border-top-color: #E00914;
+    border-radius: 50%;
+    animation: artelibre-spin 0.8s linear infinite;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+@keyframes artelibre-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Error */
+.artelibre-error {
+    text-align: center;
+    padding: 2rem;
+    color: #dc2626;
+    background-color: #fee2e2;
+    border-radius: 8px;
+    border: 1px solid #fca5a5;
+}
+
+.artelibre-no-api-results {
+    color: #888;
+    font-style: italic;
+    padding: 16px 0;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+    .artelibre-search-wrapper {
+        flex-direction: column;
+    }
+    .artelibre-search-input {
+        border-radius: 8px;
+        flex: 1;
+    }
+    .artelibre-search-btn,
+    .artelibre-search-button {
+        border-radius: 8px;
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   Clear Button en searchform
+   ========================================================= */
+.searchbar {
+    position: relative;
+}
+
+.btn-clear-search {
+    position: absolute;
+    right: 90px; /* a la izquierda del botón "Search" */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    font-size: 14px;
+    padding: 4px 8px;
+    line-height: 1;
+    border-radius: 50%;
+    transition: color 0.2s, background 0.2s;
+    z-index: 2;
+}
+
+.btn-clear-search:hover {
+    color: #888;
+    background: none;
+}
+
+/* =========================================================
+   Filtros de tipo de imagen (radio buttons)
+   ========================================================= */
+.artelibre-type-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin: 16px 0 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.artelibre-type-filter label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted, #aaa);
+    transition: color 0.2s;
+}
+
+.artelibre-type-filter label:has(input:checked) {
+    color: #E00914;
+}
+
+.artelibre-type-filter input[type="radio"] {
+    accent-color: #E00914;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+/* =========================================================
+   Botón Load More
+   ========================================================= */
+.artelibre-load-more {
+    display: block;
+    margin: 32px auto 0;
+    padding: 12px 40px;
+}
+
+.artelibre-spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: artelibre-spin 0.7s linear infinite;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+/* =========================================================
+   Sección trending API (homepage)
+   ========================================================= */
+.artelibre-api-trending {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border, rgba(255,255,255,0.08));
+}
+
+.artelibre-api-trending .section-sub {
+    font-size: 14px;
+    color: var(--text-muted, #aaa);
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+
+.artelibre-trending-loading {
+    text-align: center;
+    padding: 32px 20px;
+    color: #E00914;
+}
+
+.loading-spinner-api {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(224, 9, 20, 0.2);
+    border-top-color: #E00914;
+    border-radius: 50%;
+    animation: artelibre-spin 0.8s linear infinite;
+    vertical-align: middle;
+    margin-bottom: 8px;
+}
+
+/* =========================================================
+   Search results page — section-sub reutilizado
+   ========================================================= */
+
+/* =========================================================
+   Logo ArteLibre
+   ========================================================= */
+.artelibre-logo-icon {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    border-radius: var(--radius-sm, 8px);
+    background: transparent;
+    mix-blend-mode: screen;
+}
+
+/* Quitar el fondo del contenedor .logo cuando usa nuestro icono */
+.logo:has(.artelibre-logo-icon) {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.artelibre-card .thumb::after {
+    content: '';
+    position: absolute;
+    inset: auto 14px 14px auto;
+    width: 46px;
+    height: 46px;
+    border-radius: 999px;
+    background: rgba(10, 10, 18, 0.72);
+    border: 1px solid rgba(255,255,255,0.14);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+}
+
+.artelibre-card .thumb::before {
+    content: 'Preview';
+    position: absolute;
+    right: 25px;
+    bottom: 28px;
+    z-index: 2;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+}
+
+.artelibre-card:hover .thumb::after,
+.artelibre-card:hover .thumb::before {
+    opacity: 1;
+    transform: translateY(0);
+}

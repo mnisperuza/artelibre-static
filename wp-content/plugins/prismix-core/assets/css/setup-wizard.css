@@ -1,0 +1,334 @@
+/**
+ * Prismix Setup Wizard styles.
+ *
+ * Wizard renders inside wp-admin chrome (admin bar + sidebar). Styles
+ * scope to `.prismix-wizard-body` (a wrapper INSIDE `.wrap`) so they
+ * don't leak into other admin pages.
+ */
+
+/* Stretch the wizard area edge-to-edge inside wp-admin chrome. */
+.prismix-wizard-wrap {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+#wpbody-content:has(.prismix-wizard-wrap) { padding-bottom: 0 !important; }
+
+.prismix-wizard-body {
+    --pw-bg: #0b0a14;
+    --pw-card: #171327;
+    --pw-card-2: #1c1830;
+    --pw-text: #f5f3ff;
+    --pw-text-soft: #cfc9e8;
+    --pw-text-mute: #8a83a8;
+    --pw-border: rgba(255, 255, 255, 0.08);
+    --pw-border-strong: rgba(255, 255, 255, 0.14);
+    --pw-accent: #8b5cf6;
+    --pw-accent-2: #ec4899;
+    --pw-success: #22c55e;
+    --pw-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+
+    position: relative;
+    margin: -10px -20px 0 -22px;
+    padding: 56px 20px 80px;
+    background:
+        radial-gradient(900px 500px at 100% -20%, rgba(139,92,246,.18), transparent 60%),
+        radial-gradient(700px 400px at -10% 110%, rgba(236,72,153,.14), transparent 60%),
+        var(--pw-bg);
+    min-height: calc(100vh - 46px);
+    color: var(--pw-text);
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.prismix-wizard-body .wizard {
+    position: relative;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.prismix-wizard-body .wizard-card {
+    position: relative;
+    background: linear-gradient(180deg, var(--pw-card), var(--pw-card-2));
+    border: 1px solid var(--pw-border);
+    border-radius: 18px;
+    padding: 36px 36px 28px;
+    box-shadow: var(--pw-shadow);
+    margin-top: 0;
+    color: var(--pw-text);
+}
+
+.prismix-wizard-body .prismix-wizard-skip {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--pw-text-mute);
+    text-decoration: none;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: rgba(255,255,255,.04);
+    border: 1px solid var(--pw-border);
+    transition: background .15s ease, color .15s ease, border-color .15s ease;
+    z-index: 2;
+}
+.prismix-wizard-body .prismix-wizard-skip:hover {
+    background: rgba(255,255,255,.08);
+    color: var(--pw-text);
+    border-color: var(--pw-border-strong);
+}
+.prismix-wizard-body .prismix-wizard-skip .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.prismix-wizard-body .wizard-logo {
+    text-align: center;
+    margin: 0 0 18px;
+}
+.prismix-wizard-body .wizard-logo svg {
+    width: 52px;
+    height: 52px;
+    filter: drop-shadow(0 6px 18px rgba(139,92,246,.35));
+}
+
+.prismix-wizard-body .wizard-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 26px;
+}
+.prismix-wizard-body .wizard-steps .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    transition: all .25s ease;
+}
+.prismix-wizard-body .wizard-steps .dot.active {
+    width: 26px;
+    background: linear-gradient(90deg, var(--pw-accent), var(--pw-accent-2));
+    box-shadow: 0 0 0 4px rgba(139,92,246,.12);
+}
+.prismix-wizard-body .wizard-steps .dot.done { background: var(--pw-success); }
+
+.prismix-wizard-body h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 8px;
+    color: var(--pw-text);
+    letter-spacing: -0.01em;
+    padding: 0;
+    line-height: 1.25;
+}
+.prismix-wizard-body .subtitle {
+    text-align: center;
+    color: var(--pw-text-soft);
+    font-size: 14px;
+    line-height: 1.55;
+    margin: 0 0 26px;
+}
+
+.prismix-wizard-body label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--pw-text-soft);
+    margin: 14px 0 6px;
+}
+
+.prismix-wizard-body input[type="text"],
+.prismix-wizard-body input[type="url"] {
+    width: 100%;
+    padding: 12px 14px;
+    background: rgba(11, 10, 20, .8);
+    border: 1px solid var(--pw-border);
+    border-radius: 10px;
+    color: var(--pw-text);
+    font-size: 14px;
+    font-family: inherit;
+    box-sizing: border-box;
+    box-shadow: none;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+.prismix-wizard-body input[type="text"]:focus,
+.prismix-wizard-body input[type="url"]:focus {
+    border-color: var(--pw-accent);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(139,92,246,0.18);
+}
+
+.prismix-wizard-body .btn-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 26px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.prismix-wizard-body .btn {
+    padding: 11px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform .12s ease, filter .15s ease, background .15s ease, border-color .15s ease;
+    font-family: inherit;
+    line-height: 1.2;
+}
+.prismix-wizard-body .btn-primary {
+    background: linear-gradient(135deg, var(--pw-accent), var(--pw-accent-2));
+    color: #fff !important;
+    box-shadow: 0 8px 24px rgba(139,92,246,.28);
+}
+.prismix-wizard-body .btn-primary:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.prismix-wizard-body .btn-secondary {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--pw-text);
+    border: 1px solid var(--pw-border-strong);
+}
+.prismix-wizard-body .btn-secondary:hover { background: rgba(255, 255, 255, 0.08); }
+.prismix-wizard-body .btn-skip {
+    background: none;
+    border: none;
+    color: var(--pw-text-mute);
+    font-size: 13px;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-family: inherit;
+}
+.prismix-wizard-body .btn-skip:hover { color: var(--pw-text); }
+
+.prismix-wizard-body .step { display: none; }
+.prismix-wizard-body .step.active { display: block; }
+
+.prismix-wizard-body .toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid var(--pw-border);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    gap: 16px;
+}
+.prismix-wizard-body .toggle-row label { margin: 0; color: var(--pw-text); font-size: 14px; }
+.prismix-wizard-body .toggle-row .desc {
+    font-size: 12px;
+    color: var(--pw-text-mute);
+    margin-top: 4px;
+    font-weight: 400;
+}
+
+.prismix-wizard-body .toggle {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+}
+.prismix-wizard-body .toggle input { opacity: 0; width: 0; height: 0; }
+.prismix-wizard-body .toggle .slider {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background .25s ease;
+}
+.prismix-wizard-body .toggle .slider::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 3px;
+    top: 3px;
+    background: #fff;
+    border-radius: 999px;
+    transition: transform .25s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+}
+.prismix-wizard-body .toggle input:checked + .slider {
+    background: linear-gradient(135deg, var(--pw-accent), var(--pw-accent-2));
+}
+.prismix-wizard-body .toggle input:checked + .slider::before { transform: translateX(20px); }
+
+.prismix-wizard-body .progress {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    margin: 16px 0;
+    overflow: hidden;
+    display: none;
+}
+.prismix-wizard-body .progress .bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--pw-accent), var(--pw-accent-2));
+    border-radius: 999px;
+    width: 0;
+    transition: width 1.2s ease;
+}
+.prismix-wizard-body .status-msg {
+    text-align: center;
+    font-size: 13px;
+    color: var(--pw-text-mute);
+    margin-top: 8px;
+    min-height: 20px;
+}
+
+.prismix-wizard-body .success-icon {
+    font-size: 56px;
+    text-align: center;
+    margin: 0 0 12px;
+    line-height: 1;
+}
+
+.prismix-wizard-body .links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 22px;
+}
+.prismix-wizard-body .link-card {
+    display: block;
+    padding: 16px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--pw-border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--pw-text-soft);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    transition: background .15s ease, border-color .15s ease, color .15s ease, transform .12s ease;
+}
+.prismix-wizard-body .link-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--pw-text);
+    border-color: rgba(139,92,246,0.4);
+    transform: translateY(-1px);
+}
+.prismix-wizard-body .link-card .icon {
+    font-size: 22px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Kill the .wrap > h1 default WP heading on the wizard page so the
+ * card is the focal point. The page title is already in <title>. */
+.prismix-wizard-wrap > h1 { display: none; }
+
+@media (max-width: 600px) {
+    .prismix-wizard-body { margin-left: -10px; margin-right: -10px; padding: 40px 12px 60px; }
+    .prismix-wizard-body .wizard-card { padding: 28px 18px; }
+    .prismix-wizard-body h1 { font-size: 22px; }
+    .prismix-wizard-body .links-grid { grid-template-columns: 1fr; }
+    .prismix-wizard-body .prismix-wizard-skip { top: 8px; right: 8px; }
+}
